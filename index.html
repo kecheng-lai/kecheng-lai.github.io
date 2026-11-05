@@ -1,18 +1,132 @@
 <!doctype html>
 <html lang="zh-CN">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>赖科成 · 个人工作台</title>
-<meta name="description" content="赖科成的个人工作台：Agent 工程、游戏工具与学习记录。">
-<style>
-:root{--paper:#f4f7fb;--ink:#22344a;--muted:#617188;--blue:#2457a7;--line:#dbe3ee;--wash:#e7eef8;--white:#fff}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:36px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"PingFang SC","Microsoft YaHei",sans-serif;line-height:1.8}a{color:inherit;text-decoration:none}a:hover{color:var(--blue)}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:5px}main{max-width:1120px;margin:auto;padding:0 48px}header{display:flex;align-items:center;justify-content:space-between;padding:29px 0;border-bottom:1px solid var(--line)}.brand{font-weight:700;letter-spacing:.06em}.brand span{font-size:12px;color:var(--muted);font-weight:400;letter-spacing:0;margin-left:14px}nav{display:flex;gap:28px;font-size:13px}.hero{display:grid;grid-template-columns:1.25fr 1fr;align-items:center;gap:40px;padding:82px 0 75px}.intro{font-size:14px;color:var(--blue);margin:0 0 14px}h1{font-size:clamp(36px,4.5vw,58px);line-height:1.3;letter-spacing:-.05em;margin:0 0 24px;font-weight:650}h1 span{display:block}.lede{font-size:15px;max-width:440px;color:var(--muted);margin-bottom:27px}.actions{display:flex;gap:12px;flex-wrap:wrap}.button{font-size:13px;padding:10px 21px;border:1px solid var(--line);border-radius:5px;background:white}.primary{background:var(--blue);color:white;border-color:var(--blue)}.primary:hover{background:#1b4382;color:white}.desk{position:relative;min-height:294px;display:flex;align-items:center;justify-content:center}.dotgrid{position:absolute;inset:0;background-image:radial-gradient(#bac9dd 1px,transparent 1px);background-size:18px 18px;mask-image:radial-gradient(ellipse,#000 35%,transparent 72%)}.notebook{position:relative;width:285px;background:#fff;box-shadow:10px 14px 0 #dbe5f3;border:1px solid #cbd7e7;transform:rotate(-4deg);border-radius:3px;padding:30px 25px 20px 37px;background-image:repeating-linear-gradient(transparent 0,transparent 31px,#edf1f7 31px,#edf1f7 32px)}.notebook:before{content:'';position:absolute;left:21px;top:0;bottom:0;border-left:1px solid #dce6f3}.note-title{font-family:Georgia,serif;font-style:italic;font-size:24px;color:var(--blue);margin:0 0 19px}.note-line{font-size:13px;height:32px}.note-line span{color:#7993b7;margin-right:8px}.note-small{font-size:11px;color:var(--muted);margin-top:20px}.stamp{position:absolute;right:4px;bottom:17px;transform:rotate(7deg);border:1px solid #8ca7cc;padding:4px 12px;font-family:Georgia,serif;font-size:13px;color:var(--blue);background:#f4f7fb}.section{padding:40px 0;border-top:1px solid var(--line)}.section-top{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin-bottom:25px}h2{font-size:21px;margin:0;letter-spacing:-.03em}.section-top p{font-size:12px;color:var(--muted);margin:0}.projects{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}.project{padding:27px;background:var(--white);border:1px solid var(--line);border-radius:7px}.project.featured{grid-row:span 2;background:#eaf0f9;padding:32px;display:flex;flex-direction:column;align-items:flex-start}.status{font-size:11px;color:#526887;display:inline-flex;align-items:center;gap:7px}.status:before{content:'';width:6px;height:6px;border-radius:100%;background:#6683a9}.project h3{font-size:19px;margin:12px 0 8px}.project p{font-size:13px;color:var(--muted);margin:0 0 18px;max-width:430px}.tags{font-size:11px;display:flex;gap:10px;color:#4d6586;flex-wrap:wrap}.project a{font-size:12px;margin-top:auto;padding-top:17px;text-decoration:underline;text-underline-offset:4px}.mini-visual{display:flex;gap:8px;align-items:center;width:100%;padding:27px 0 31px}.mini-visual span{background:#fff;border:1px solid #ccd9eb;border-radius:4px;padding:8px 11px;font-size:12px}.mini-visual b{font-weight:400;color:#758eaf}.project.small{padding:21px 25px}.project.small h3{font-size:16px;margin:6px 0}.project.small p{margin-bottom:10px;font-size:12px}.note-row{display:grid;grid-template-columns:78px 1fr auto;gap:18px;border-bottom:1px solid var(--line);padding:20px 0;align-items:start}.note-row:last-child{border-bottom:0}.note-type{font-size:11px;color:var(--muted);padding-top:4px}details{width:100%}summary{cursor:pointer;font-size:15px;list-style:none}summary::-webkit-details-marker{display:none}summary:after{content:'＋';font-size:15px;float:right;color:var(--blue);margin-left:15px}details[open] summary:after{content:'−'}details p{font-size:13px;color:var(--muted);max-width:690px;margin-bottom:0}.row-state{font-size:11px;color:var(--muted);padding-top:4px}.about{display:grid;grid-template-columns:1fr 1fr;gap:65px}.about p{color:var(--muted);font-size:14px}.about h2{margin-bottom:19px}.aside{border-left:2px solid #b6c8e1;padding-left:25px}.aside h3{font-size:14px;margin:0 0 10px}.aside p{font-size:13px;margin:0}.game{display:inline-block;font-size:11px;background:#e7edf5;padding:3px 9px;border-radius:3px;margin:14px 5px 0 0;color:#516887}footer{padding:25px 0 36px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;font-size:11px;color:var(--muted)}.demo{display:inline-block;margin:0 0 30px;font-size:11px;color:var(--muted)}@media(max-width:700px){main{padding:0 23px}header{padding:22px 0}.brand span{display:none}nav{gap:17px;font-size:12px}.hero{grid-template-columns:1fr;gap:14px;padding:48px 0 37px}.desk{min-height:275px}.notebook{width:270px}.stamp{right:10px}.projects,.about{grid-template-columns:1fr}.project.featured{grid-row:auto}.section{padding:30px 0}.section-top{align-items:flex-start;gap:8px;flex-direction:column}.note-row{grid-template-columns:52px 1fr;gap:8px}.row-state{display:none}.about{gap:22px}footer{flex-direction:column;gap:4px}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-.interests-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}.interests-grid h3{font-size:16px;margin:0 0 12px}.interests-grid p{font-size:14px;color:var(--muted);margin:0}.interest-main{border-left:3px solid #8ca7cc;padding-left:24px}.interest-side{display:grid;gap:22px}.interest-side article+article{padding-top:18px;border-top:1px solid var(--line)}@media(max-width:700px){.interests-grid{grid-template-columns:1fr;gap:28px}}</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="赖科成的个人主页：Agent 工程、项目、技术博客与兴趣。">
+  <title>赖科成 | Kecheng Lai</title>
+  <style>
+    :root { --page:#fff; --surface:#f8f9fb; --ink:#1b2029; --body:#414853; --muted:#737b87; --line:#e5e7eb; --link:#2457bd; }
+    *, *::before, *::after { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:95px; }
+    body { margin:0; background:var(--page); color:var(--body); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",Arial,sans-serif; font-size:15px; line-height:1.85; }
+    a { color:var(--link); text-decoration:none; text-underline-offset:4px; }
+    a:hover { text-decoration:underline; }
+    a:focus-visible, summary:focus-visible { outline:2px solid var(--link); outline-offset:5px; border-radius:2px; }
+    .container { width:calc(100% - 48px); max-width:1040px; margin:0 auto; }
+    .site-header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.97); border-bottom:1px solid var(--line); }
+    .header-inner { min-height:68px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .site-name { color:var(--ink); font-size:18px; font-weight:700; white-space:nowrap; }
+    .site-name:hover { text-decoration:none; }
+    nav { display:flex; gap:8px; }
+    nav a { color:var(--body); font-size:14px; padding:6px 12px; border-radius:5px; }
+    nav a:hover { background:#f0f2f5; text-decoration:none; }
+    .intro-band { background:var(--surface); }
+    .intro { display:grid; grid-template-columns:190px minmax(0,1fr); gap:58px; align-items:center; padding:66px 0 62px; }
+    .portrait { margin:0; }
+    .portrait img { width:190px; height:224px; display:block; object-fit:cover; border-radius:7px; background:#e9edf2; }
+    .portrait figcaption { font-size:12px; color:var(--muted); margin-top:8px; }
+    h1 { color:var(--ink); font-size:32px; line-height:1.35; letter-spacing:-.035em; margin:0 0 9px; }
+    .identity { margin:0 0 16px; font-size:16px; color:var(--link); font-weight:500; }
+    .intro-copy p { margin-top:0; margin-bottom:14px; }
+    .focus { border-left:2px solid #b6c9e8; padding:6px 0 6px 16px; margin:20px 0; }
+    .focus strong { color:var(--ink); font-size:14px; }
+    .focus p { font-size:14px; margin:4px 0 0; }
+    .profile-links { display:flex; gap:23px; align-items:center; flex-wrap:wrap; font-size:14px; }
+    .profile-links a { display:inline-flex; align-items:center; gap:7px; font-weight:600; }
+    .profile-links svg { width:17px; height:17px; flex:none; }
+    .section { padding-top:46px; }
+    .section-title { display:flex; align-items:baseline; gap:13px; margin:0 0 4px; }
+    h2 { font-size:25px; line-height:1.5; color:var(--ink); margin:0; letter-spacing:-.025em; }
+    .section-title span { font-size:14px; color:var(--muted); }
+    .section-intro { font-size:13px; color:var(--muted); margin:4px 0 17px; }
+    .rule { border:0; border-top:1px solid var(--line); margin:16px 0 0; }
+    .entry { display:grid; grid-template-columns:190px minmax(0,1fr); gap:58px; padding:26px 0; border-bottom:1px solid var(--line); }
+    .entry:last-child { border-bottom:0; }
+    .entry-meta { font-size:12px; color:var(--muted); padding-top:4px; }
+    .entry-meta span { display:block; }
+    .entry-meta .topic { color:#536171; margin-top:9px; font-size:13px; }
+    h3 { color:var(--ink); font-size:17px; line-height:1.55; margin:0 0 7px; font-weight:650; }
+    .entry-copy p { margin:0 0 9px; font-size:14px; }
+    .entry-copy .stack { font-size:12px; color:var(--muted); margin-bottom:7px; }
+    .entry-links { display:flex; flex-wrap:wrap; gap:16px; font-size:13px; }
+    .blog-entry { display:grid; grid-template-columns:190px minmax(0,1fr); gap:58px; padding:21px 0; border-bottom:1px solid var(--line); }
+    .blog-entry:last-child { border-bottom:0; }
+    summary { cursor:pointer; color:var(--link); font-size:16px; font-weight:600; list-style:none; display:flex; justify-content:space-between; align-items:baseline; gap:20px; }
+    summary::-webkit-details-marker { display:none; }
+    summary::after { content:'+'; font-weight:400; color:var(--muted); flex:none; }
+    details[open] summary::after { content:'−'; }
+    details p { font-size:14px; margin:10px 0 0; }
+    .interests { display:grid; grid-template-columns:1fr 1fr; gap:54px; padding:25px 0 14px; }
+    .interests p { font-size:14px; margin:0 0 12px; }
+    .interests h3 { font-size:16px; }
+    .games { color:var(--muted); font-size:13px !important; }
+    footer { border-top:1px solid var(--line); margin-top:38px; padding:23px 0 30px; display:flex; justify-content:space-between; gap:20px; color:var(--muted); font-size:12px; }
+    @media(max-width:700px) {
+      html { scroll-padding-top:85px; }
+      .container { width:calc(100% - 40px); }
+      .header-inner { min-height:62px; gap:10px; }
+      .site-name { font-size:16px; }
+      nav { gap:0; } nav a { padding:6px 9px; font-size:13px; }
+      .intro { grid-template-columns:1fr; gap:24px; padding:35px 0; }
+      .portrait { display:flex; align-items:end; gap:15px; }
+      .portrait img { width:112px; height:126px; }
+      .portrait figcaption { margin:0; }
+      h1 { font-size:28px; }
+      .identity { font-size:15px; }
+      .section { padding-top:34px; }
+      h2 { font-size:23px; }
+      .entry, .blog-entry { grid-template-columns:1fr; gap:8px; padding:21px 0; }
+      .entry-meta { display:flex; align-items:baseline; gap:14px; padding:0; }
+      .entry-meta .topic { margin:0; }
+      .interests { grid-template-columns:1fr; gap:17px; }
+      .profile-links { gap:20px; }
+      footer { margin-top:24px; }
+    }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+  </style>
 </head>
-<body><main>
-<header><a class="brand" href="#home">赖科成<span>Kecheng Lai</span></a><nav aria-label="主导航"><a href="#projects">项目</a><a href="#blog">Blog</a><a href="#interests">兴趣</a></nav></header>
-<section class="hero" id="home"><div><p class="intro">你好，我是科成。</p><h1>把好奇心，<span>做成能运行的东西。</span></h1><p class="lede">计算机专业，正在探索 Agent 工程与游戏工具。关心一次行动如何执行、一段轨迹如何复现，以及一个系统如何变得更可靠。</p><div class="actions"><a href="#projects" class="button primary">看看我在做什么</a><a class="button" href="https://github.com/kecheng-lai" target="_blank" rel="noopener noreferrer">GitHub</a></div></div><div class="desk" aria-label="工作笔记插画"><div class="dotgrid"></div><div class="notebook"><p class="note-title">On my workbench</p><div class="note-line"><span>✓</span> 让工具真正跑起来</div><div class="note-line"><span>○</span> 读懂一次 Agent Loop</div><div class="note-line"><span>○</span> 记录，验证，再改进</div><p class="note-small">一点源码，一点实验，一点游戏。</p></div><div class="stamp">Always a work in progress.</div></div></section>
-<section class="section" id="projects"><div class="section-top"><h2>项目</h2><p>从游戏里的问题出发，走向 Agent 工程。</p></div><div class="projects"><article class="project featured"><span class="status">探索中</span><h3>UGC Agent Kit</h3><p>围绕游戏创作工具探索 Agent 的执行链路，尝试连接 Unity MCP 与 Python Agent 框架。当前关注工具接入和游戏状态验证。</p><div class="mini-visual" aria-label="Agent 通过 MCP 连接 Unity"><span>Agent</span><b>↔</b><span>MCP</span><b>↔</b><span>Unity</span></div><div class="tags"><span>Python</span><span>Unity MCP</span><span>工具调用</span></div><a href="https://github.com/kecheng-lai/-Agent-" target="_blank" rel="noopener noreferrer">查看项目仓库</a></article><article class="project small"><span class="status">已有功能验证</span><h3>RimWorld MOD 排序探索</h3><p>基于 RimSort 尝试 AI 辅助 MOD 排序，已跑通功能；继续梳理实现细节与验证范围。</p><div class="tags"><span>RimSort</span><span>AI 辅助工具</span></div></article><article class="project small"><span class="status">开发中</span><h3>RimSociety</h3><p>围绕 RimWorld 社会模拟与 Agent 角色行为的在研项目，已有代码实现。</p><div class="tags"><span>游戏模拟</span><span>Agent 行为</span></div></article></div></section>
-<section class="section" id="blog"><div class="section-top"><h2>Blog</h2><p>演示选题 · 点开看看准备写什么</p></div><div class="note-row"><span class="note-type">源码阅读</span><details><summary>一次 Agent Loop，到底发生了什么？</summary><p>从用户请求出发，沿着模型生成、工具执行、Observation 写回与结束判断这条链路阅读 smolagents。记录每一步的职责与输入输出。</p></details><span class="row-state">选题</span></div><div class="note-row"><span class="note-type">工程实践</span><details><summary>让 Agent 连上 Unity：先跑通一次工具调用</summary><p>先验证 MCP 连接、工具发现和一次真实调用，再逐步加入游戏状态读取与结果检查。这篇笔记将记录最小可运行链路。</p></details><span class="row-state">选题</span></div><div class="note-row"><span class="note-type">研究问题</span><details><summary>Agent 失败之后，如何知道该改哪里？</summary><p>研究兴趣：收集失败轨迹，观察中间状态，比较 Harness 干预与增加重试的效果和成本。目前作为研究问题探索，尚无实验结论。</p></details><span class="row-state">选题</span></div></section>
-<section class="section" id="interests"><div class="section-top"><h2>兴趣</h2><p>工作台以外，也有很大的世界。</p></div><div class="interests-grid"><article class="interest-main"><h3>会自己长出故事的游戏</h3><p>喜欢 RimWorld 里的殖民地，也喜欢骑马与砍杀里的世界。角色、规则与偶然相遇，常常比预设好的剧情更让我着迷。这也连接着我对 Agent 角色行为和社会模拟的兴趣。</p><div><span class="game">RimWorld</span><span class="game">骑马与砍杀</span><span class="game">群星</span></div></article><div class="interest-side"><article><h3>协作与临场判断</h3><p>Squad 里吸引我的，是信息有限时的沟通、协作与决策。</p></article><article><h3>离开屏幕</h3><p>游泳、健身。给注意力换一个地方，也让生活有一点不同的节奏。</p></article></div></div></section>
-<p class="demo">个人主页演示版：项目描述待正式发布前确认；Blog 为选题预览。</p><footer><span>赖科成 · 做一点，理解一点，记录一点。</span><span>Built with curiosity.</span></footer>
-</main></body></html>
+<body id="home">
+  <header class="site-header"><div class="container header-inner">
+    <a class="site-name" href="#home">Kecheng Lai · 赖科成</a>
+    <nav aria-label="主导航"><a href="#projects">项目</a><a href="#blog">Blog</a><a href="#interests">兴趣</a></nav>
+  </div></header>
+  <main>
+    <div class="intro-band"><section class="container intro" aria-labelledby="intro-title">
+      <figure class="portrait"><img src="https://avatars.githubusercontent.com/u/113001336?v=4" alt="赖科成的 GitHub 头像" width="190" height="224"><figcaption>Chengdu, China</figcaption></figure>
+      <div class="intro-copy">
+        <h1 id="intro-title">你好，我是赖科成。</h1>
+        <p class="identity">软件工程硕士在读，探索 Agent 与游戏工具。</p>
+        <p>目前在电子科技大学学习软件工程。关注 Agent 的工具调用、执行轨迹与系统可靠性，也喜欢从游戏中的具体问题出发，动手做一些工具。</p>
+        <p>这里记录我的项目、源码阅读和学习过程。</p>
+        <div class="focus"><strong>最近在做</strong><p>尝试连接 Unity MCP 与 Python Agent 框架，阅读 smolagents 的执行链路，探索 Harness 如何帮助定位和改善 Agent 的失败。</p></div>
+        <div class="profile-links">
+          <a href="https://github.com/kecheng-lai" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.76-.24.76-.54v-2.08c-3.12.68-3.78-1.32-3.78-1.32-.51-1.29-1.25-1.63-1.25-1.63-1.02-.7.08-.69.08-.69 1.13.08 1.73 1.16 1.73 1.16 1.01 1.72 2.64 1.22 3.29.93.1-.73.4-1.22.71-1.5-2.49-.29-5.11-1.25-5.11-5.54 0-1.22.44-2.22 1.16-3-.12-.28-.5-1.42.11-2.96 0 0 .95-.3 3.08 1.15a10.7 10.7 0 0 1 5.6 0c2.14-1.45 3.08-1.15 3.08-1.15.61 1.54.23 2.68.12 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.62 5.25-5.12 5.53.4.35.76 1.03.76 2.08v3.06c0 .3.2.65.77.54A11.2 11.2 0 0 0 12 .8Z"/></svg>GitHub</a>
+          <a href="#projects">项目</a><a href="#blog">技术博客</a>
+        </div>
+      </div>
+    </section></div>
+    <div class="container">
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-title"><h2 id="projects-title">Projects</h2><span>项目</span></div>
+        <hr class="rule">
+        <article class="entry"><div class="entry-meta"><span>探索中</span><span class="topic">Agent / 游戏工具</span></div><div class="entry-copy"><h3><a href="https://github.com/kecheng-lai/-Agent-" target="_blank" rel="noopener noreferrer">UGC Agent Kit</a></h3><p>围绕游戏创作工具探索 Agent 的执行链路，尝试连接 Unity MCP 与 Python Agent 框架。当前关注工具接入、游戏状态读取与结果验证。</p><p class="stack">Python / Unity MCP / 工具调用</p><div class="entry-links"><a href="https://github.com/kecheng-lai/-Agent-" target="_blank" rel="noopener noreferrer">Code</a></div></div></article>
+        <article class="entry"><div class="entry-meta"><span>已有功能验证</span><span class="topic">RimWorld / MOD 工具</span></div><div class="entry-copy"><h3>AI 辅助 MOD 排序探索</h3><p>基于 RimSort 尝试 AI 辅助 RimWorld MOD 排序，已跑通功能。正在梳理实现细节和实际验证范围。</p><p class="stack">RimSort / AI 辅助工具</p></div></article>
+        <article class="entry"><div class="entry-meta"><span>开发中</span><span class="topic">Agent / 社会模拟</span></div><div class="entry-copy"><h3>RimSociety</h3><p>围绕 RimWorld 社会模拟与 Agent 角色行为的在研项目，已有代码实现，仍在开发中。</p><p class="stack">游戏模拟 / Agent 行为</p></div></article>
+      </section>
+      <section class="section" id="blog" aria-labelledby="blog-title">
+        <div class="section-title"><h2 id="blog-title">Blog</h2><span>学习与记录</span></div>
+        <p class="section-intro">以下为准备写的选题，点击标题展开简介。</p><hr class="rule">
+        <article class="blog-entry"><div class="entry-meta"><span>源码阅读 · 选题</span></div><details><summary>一次 Agent Loop，到底发生了什么？</summary><p>从用户请求出发，沿着模型生成、工具执行、Observation 写回与结束判断这条链路阅读 smolagents，梳理每一步的职责与输入输出。</p></details></article>
+        <article class="blog-entry"><div class="entry-meta"><span>工程实践 · 选题</span></div><details><summary>让 Agent 连上 Unity：先跑通一次工具调用</summary><p>从 MCP 连接、工具发现到一次真实调用，记录最小可运行链路，再逐步加入游戏状态读取与结果检查。</p></details></article>
+        <article class="blog-entry"><div class="entry-meta"><span>研究问题 · 选题</span></div><details><summary>Agent 失败之后，如何知道该改哪里？</summary><p>探索如何收集失败轨迹和中间状态，比较 Harness 干预与增加重试的效果和成本。目前是研究问题，尚无实验结论。</p></details></article>
+      </section>
+      <section class="section" id="interests" aria-labelledby="interests-title">
+        <div class="section-title"><h2 id="interests-title">Interests</h2><span>代码以外</span></div><hr class="rule">
+        <div class="interests"><div><h3>游戏与涌现的故事</h3><p>喜欢能让角色、规则与偶然相互作用的游戏。殖民地的日常、角色之间的关系，以及系统中长出的意外，也是我探索社会模拟与 Agent 行为的起点。</p><p class="games">RimWorld、骑马与砍杀、群星</p></div><div><h3>协作与运动</h3><p>喜欢 Squad 里信息有限时的沟通与团队协作。离开屏幕以后，会去游泳、健身。</p><p class="games">Squad、游泳、健身</p></div></div>
+      </section>
+      <footer><span>© 2026 赖科成</span><a href="https://github.com/kecheng-lai" target="_blank" rel="noopener noreferrer">GitHub</a></footer>
+    </div>
+  </main>
+</body>
+</html>
